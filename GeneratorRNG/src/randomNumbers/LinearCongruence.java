@@ -2,7 +2,12 @@ package randomNumbers;
 
 public class LinearCongruence implements RandomGenerator{
 	private int seed,additiveConstant,multiplicativeConstant,currentXValue,amountToGenerate;
-
+	/*
+	 * 
+	 * @param seed
+	 * is a Seed for the start of generation
+	 * 
+	 * */
 	public void setConstants(int seed, int kappa, int adding,int generateNumber) {
 		setSeed(seed);
 		calculateMultiplicator(kappa);
