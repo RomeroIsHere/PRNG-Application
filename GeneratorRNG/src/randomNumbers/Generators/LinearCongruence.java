@@ -21,10 +21,10 @@ public class LinearCongruence implements RandomGenerator{
 	private void calculateMultiplicator(int kappa) {
 		multiplicativeConstant=4*kappa+1;
 	}
+	
 	@Override
 	public float next() {
 		currentXValue=(multiplicativeConstant*currentXValue+additiveConstant)%amountToGenerate;
-		System.out.println(currentXValue);
 		return currentXValue/(amountToGenerate-1.0f);
 	}
 
