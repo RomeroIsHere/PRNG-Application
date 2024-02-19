@@ -1,4 +1,4 @@
-package randomNumbers;
+package randomNumbers.Generators;
 
 public interface RandomGenerator {
 	public float next();

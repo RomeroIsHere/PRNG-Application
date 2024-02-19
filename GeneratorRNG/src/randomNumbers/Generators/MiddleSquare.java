@@ -1,4 +1,4 @@
-package randomNumbers;
+package randomNumbers.Generators;
 
 public class MiddleSquare implements RandomGenerator{
 	protected long seed,currentXValue;

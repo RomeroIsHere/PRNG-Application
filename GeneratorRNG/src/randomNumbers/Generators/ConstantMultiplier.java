@@ -1,4 +1,4 @@
-package randomNumbers;
+package randomNumbers.Generators;
 
 public class ConstantMultiplier extends MiddleSquare implements RandomGenerator{
 	private int multiplier;

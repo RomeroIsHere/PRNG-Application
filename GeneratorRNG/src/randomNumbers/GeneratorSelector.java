@@ -1,6 +1,9 @@
 package randomNumbers;
 
-
+import randomNumbers.Generators.ConstantMultiplier;
+import randomNumbers.Generators.LinearCongruence;
+import randomNumbers.Generators.MiddleProduct;
+import randomNumbers.Generators.MiddleSquare;
 
 public class GeneratorSelector {
 
@@ -9,7 +12,9 @@ public class GeneratorSelector {
 		MiddleSquare MidSq=new MiddleSquare();
 		MiddleProduct midProd=new MiddleProduct();
 		ConstantMultiplier constantMultiplier=new ConstantMultiplier();
-		LinearCongruence linearC=new LinearCongruence(); 
+		LinearCongruence linearC=new LinearCongruence();
+		
+		
 		MidSq.setSeed(3137);
 		midProd.setSeed(15367,92463);
 		constantMultiplier.setSeed(62473);

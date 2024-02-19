@@ -1,4 +1,4 @@
-package randomNumbers;
+package randomNumbers.Generators;
 
 public class MiddleProduct extends MiddleSquare implements RandomGenerator{
 	private long secondSeed,previousXValue;

@@ -1,4 +1,4 @@
-package randomNumbers;
+package randomNumbers.Generators;
 
 public class LinearCongruence implements RandomGenerator{
 	private int seed,additiveConstant,multiplicativeConstant,currentXValue,amountToGenerate;
