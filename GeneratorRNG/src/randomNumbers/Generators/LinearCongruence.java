@@ -18,6 +18,9 @@ public class LinearCongruence implements RandomGenerator{
 	public void setAmountToGenerate(int amountToGenerate) {
 		this.amountToGenerate = Math.abs(amountToGenerate);
 	}
+	public int getAmountToGenerate() {
+		return amountToGenerate;
+	}
 	private void calculateMultiplicator(int kappa) {
 		multiplicativeConstant=4*kappa+1;
 	}

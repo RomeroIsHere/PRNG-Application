@@ -1,28 +1,34 @@
 package randomNumbers;
 
-import randomNumbers.Generators.ConstantMultiplier;
-import randomNumbers.Generators.LinearCongruence;
-import randomNumbers.Generators.MiddleProduct;
-import randomNumbers.Generators.MiddleSquare;
+import randomNumbers.Generators.*;
 
 public class GeneratorSelector {
 
 	public static void main(String[] args) {
 		// TODO Add GUI
+		
 		MiddleSquare MidSq=new MiddleSquare();
 		MiddleProduct midProd=new MiddleProduct();
 		ConstantMultiplier constantMultiplier=new ConstantMultiplier();
 		LinearCongruence linearC=new LinearCongruence();
 		
 		
-		MidSq.setSeed(3137);
-		midProd.setSeed(15367,92463);
-		constantMultiplier.setSeed(62473);
-		constantMultiplier.setMultiplier(13741);
-		linearC.setConstants(57,43, 93, 8);
-			for (int i = 0; i < 8; i++) {	
-				System.out.printf("%f%n",linearC.next());
-			}
+		MidSq.setSeed(837462);
+		midProd.setSeed(28371,46293);
+		constantMultiplier.setSeed(762419);
+		constantMultiplier.setMultiplier(163916);
+		linearC.setConstants(83,12,37,16);
+		showGeneration(MidSq, 8);
+		showGeneration(midProd, 8);
+		showGeneration(constantMultiplier,8);
+		showGeneration(linearC,linearC.getAmountToGenerate());
+			
+	}
+	public static void showGeneration(RandomGenerator RNG,int numbersToGenerate) {
+		System.out.println("Generador "+RNG.getClass());
+		for (int i = 0; i < numbersToGenerate; i++) {	
+			System.out.printf("%f%n",RNG.next());
+		}
 	}
 
 }
