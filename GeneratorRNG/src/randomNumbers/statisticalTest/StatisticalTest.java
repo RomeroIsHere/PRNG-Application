@@ -1,5 +1,9 @@
 package randomNumbers.statisticalTest;
 
-public interface StatisticalTest {
-	public boolean test(double limit);
+public abstract class StatisticalTest {
+	protected double alpha,data[];
+	public StatisticalTest(double alpha,double...ds) {
+		data=ds;
+		this.alpha=alpha;
+	}
 }
